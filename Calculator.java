@@ -1,5 +1,5 @@
 import java.util.*;
-class Calculator
+class Calci
 {
 	public static int Add(int a,int b)
 	{
@@ -17,10 +17,14 @@ class Calculator
 	{
 		return a/b;
 	}
+}
+class Calculator
+{
 	public static void main(String[] args)
 	{
 		Scanner sc=new Scanner(System.in);
 		boolean flag=false;
+		Calci obj=new Calci();
 		System.out.println("=====Simple Calculator=====");
 		while(true)
 		{
@@ -33,13 +37,13 @@ class Calculator
 			int ch=sc.nextInt();
 			switch(ch)
 			{
-				case 1 : System.out.println("Addition of "+a+" and "+b+" is "+Add(a,b));
+				case 1 : System.out.println("Addition of "+a+" and "+b+" is "+obj.Add(a,b));
 						 break;
-				case 2 : System.out.println("Subtraction of "+a+" and "+b+" is "+Sub(a,b));
+				case 2 : System.out.println("Subtraction of "+a+" and "+b+" is "+obj.Sub(a,b));
 						 break;
-				case 3 : System.out.println("Multiplication of "+a+" and "+b+" is "+Mul(a,b));
+				case 3 : System.out.println("Multiplication of "+a+" and "+b+" is "+obj.Mul(a,b));
 						 break;
-				case 4 : System.out.println("Division of "+a+" and "+b+" is "+Div(a,b));
+				case 4 : System.out.println("Division of "+a+" and "+b+" is "+obj.Div(a,b));
 						 break;
 				default: System.out.println("Invalid Choice");
 						 flag=true;
